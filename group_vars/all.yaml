@@ -1,11 +1,13 @@
 ansible_user: ec2-user
 ansible_password: DevOps321
-MONGODB_HOST: mongodb-"{{ env }}".pugasaha.online
-CATALOGUE_HOST: catalogue-"{{ env }}".pugasaha.online
-REDIS_HOST: redis-"{{ env }}".pugasaha.online
-USER_HOST: user-"{{ env }}".pugasaha.online
-CART_HOST: cart-"{{ env }}".pugasaha.online
-MYSQL_HOST: mysql-"{{ env }}".pugasaha.online
-SHIPPING_HOST: shipping-"{{ env }}".pugasaha.online
-RABBITMQ_HOST: rabbitmq-"{{ env }}".pugasaha.online
-PAYMENT_HOST: payment-"{{ env }}".pugasaha.online
+MONGODB_HOST: mongodb-{{ env }}.pugasaha.online
+REDIS_HOST: redis-{{ env }}.pugasaha.online
+MYSQL_HOST: mysql-{{ env }}.pugasaha.online
+RABBITMQ_HOST: rabbitmq-{{ env }}.pugasaha.online
+
+CATALOGUE_HOST: catalogue.backend-alb-{{ env }}.pugasaha.online
+USER_HOST: user.backend-alb-{{ env }}.pugasaha.online
+CART_HOST: cart.backend-alb-{{ env }}.pugasaha.online
+SHIPPING_HOST: shipping.backend-alb-{{ env }}.pugasaha.online
+PAYMENT_HOST: payment.backend-alb-{{ env }}.pugasaha.online
+app_version: v3
